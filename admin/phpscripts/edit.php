@@ -30,7 +30,7 @@
     $updatequery = mysqli_query($link, $qstring);
 
     if($updatequery){
-      header("Location:../../admin_dashboard.php");
+      header("Location:../admin_dashboard.php");
     }else{
       echo "Problem";
     }

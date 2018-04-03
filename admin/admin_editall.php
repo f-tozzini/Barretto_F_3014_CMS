@@ -16,6 +16,9 @@
 <body>
 
   <img src="images/header.jpg" alt="header image" id="header-img">
+  <a href="admin_index.php">
+    <i class="fa fa-home"></i>
+  </a>
   <div id="login-container">
   <?php
       $tbl = "tbl_movies";
@@ -25,6 +28,7 @@
   ?>
 
   </div>
+
   <img src="images/footer.jpg" alt="footer image" id="footer-img">
 </body>
 </html>
