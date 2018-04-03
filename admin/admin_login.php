@@ -1,20 +1,20 @@
 <?php
   require_once('phpscripts/config.php');
   $ip = $_SERVER['REMOTE_ADDR'];
-
+  // echo $ip;
   if(isset($_POST['submit'])){
-
-    $username = trim($_POST['username']);
+    // echo "works";
+    $username = trim($_POST['username']); //trim removes the white space when people try to copy and paste
     $password = trim($_POST['password']);
-    if($username !== "" && $password !== ""){
+    if($username !== "" && $password !== ""){ //if it's identical
       $result = logIn($username, $password, $ip);
       $message = $result;
     }else{
       $message = "Please Fill the required fields.";
     }
   }
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
