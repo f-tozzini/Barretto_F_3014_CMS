@@ -24,6 +24,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/main.css">
 <title>The Movie APP</title>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="../css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -34,6 +35,18 @@
   <a href="admin_index.php">
     <i class="fa fa-home"></i>
   </a>
+
+	<a href="admin_addmovie.php">
+    <i class="ion-plus-round menu-icon"></i>
+  </a>
+  <a href="admin_editlist.php">
+    <i class="ion-edit menu-icon"></i>
+  </a>
+  <a href="admin_dashboard.php">
+    <i class="ion-android-favorite menu-icon"></i>
+  </a>
+	<a href="phpscripts/caller.php?caller_id=logout" class="sign-out">Sign Out</a>
+
   <div id="admin-container">
 	<i class="far fa-star"></i>
 	<i class="far fa-star"></i>
@@ -63,8 +76,8 @@
 
   </div>
 <div class="container">
-  <?php
-
+		<div id="movies-container">
+	<?php
 
   	if(!is_string($getMovies)){
   		while($row = mysqli_fetch_array($getMovies)){
@@ -75,7 +88,7 @@
             <h4>{$row['movies_title']}</h4>
 
               <h5><i class=\"fas fa-star\"></i>
-              </i>67 <span class=\"year\">{$row['movies_year']}</span> </h5>
+              </i>{$row['movies_rating']} <span class=\"year\">{$row['movies_year']}</span> </h5>
             <p>{$row['movies_desc']}</p>
         </div>
   			";
@@ -86,7 +99,7 @@
   		echo "<p class=\"error\">{$getMovies}</p>";
   	}
   ?>
-</div>
+</div></div>
 
   <br><br><br><br>
 <i class="far fa-star"></i>

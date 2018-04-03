@@ -15,7 +15,7 @@
 </head>
 <body>
   <img src="images/header.jpg" alt="header image" id="header-img">
-  <div id="admin-container">
+  <div id="login-container">
   <i class="far fa-star"></i>
   <i class="far fa-star"></i>
   <i class="far fa-star"></i>
@@ -23,27 +23,6 @@
   <i class="far fa-star"></i>
   <i class="far fa-star"></i>
   <i class="far fa-star"></i>
-
-<?php
-
-// $time = date("H");
-// $timezone = date("e");
-
-date_default_timezone_set('America/New_York');
-$time = date('G');
-
-?>
-
-<!-- <h3> <?php
-
-  if ( $time >= 5 && $time <= 11 ) {
-      echo "Good Morning, ";
-  } else if ( $time >= 12 && $time <= 18 ) {
-      echo "Good Afternoon, ";
-  } else if ( $time >= 19 || $time <= 4 ) {
-      echo "Good Evening, ";
-  };
-  echo $_SESSION['user_name']; ?>!</h3> -->
 
 
   <h2>What do you wanna do next?</h2>
@@ -52,7 +31,7 @@ $time = date('G');
   <br>
     <a href="admin_dashboard.php" class="admin-button">Movie Dashboard</a>
     <a href="admin_addmovie.php" class="admin-button">Add Movie</a>
-    <a href="admin_editall.php" class="admin-button">Edit Movie</a>
+    <a href="admin_editlist.php" class="admin-button">Edit Movie</a>
     <a href="phpscripts/caller.php?caller_id=logout" class="admin-button">Sign Out</a>
   <br>  <br>  <br>
 

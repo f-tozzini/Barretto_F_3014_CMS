@@ -33,7 +33,7 @@
                 $qstring3 = "INSERT INTO tbl_mov_genre VALUES(NULL, {$lastID}, {$genre})";
                 $result3 = mysqli_query($link, $qstring3);
               }
-              redirect_to("admin_index.php");
+              redirect_to("admin_dashboard.php");
       }
       // $size = getimagesize($targetpath);
       // echo $size[3];

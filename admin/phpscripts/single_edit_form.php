@@ -17,17 +17,17 @@
 
       if($fieldName != $col){
           echo "<label>{$fieldName}</label><br>";
-          if($fieldType != "252"){
-            echo "<input type=\"text\" name=\" {$fieldName}\"value =\"{$getResult[$i]}\"><br><br>";
+          if($fieldName === "movies_desc"){
+            echo "<input type=\"text\" class=\"description-form\" name=\" {$fieldName}\"value =\"{$getResult[$i]}\"><br><br>";
           }else{
-            echo "<textarea name=\"{$fieldName}\">{$getResult[$i]}</textarea>";
+            echo "<input type=\"text\" name=\" {$fieldName}\"value =\"{$getResult[$i]}\"><br><br>";
           }
       }
 
       // echo $fieldName."<br>";
       // echo $fieldType."<br><br>";
     }
-    echo "<input type=\"submit\" name=\"submit\" value=\"Save Content\">";
+    echo "<input type=\"submit\" name=\"submit\" class=\"admin-button\" value=\"Save Content\">";
     echo "</form>";
 }
 
