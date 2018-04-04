@@ -26,7 +26,8 @@
 
   <h3>Welcome to</h3>
   <img src="images/logo.svg" alt="logo" id="logo">
-  <a href="admin/admin_login.php"><h2 class="button"<a href="admin/admin_login.php">Click to login</h2></a>
+
+  <a href="admin/admin_login.php"><h2 class="index-button"><a href="admin/admin_login.php">Click here to login</h2></a>
 
 	<br><br>
 

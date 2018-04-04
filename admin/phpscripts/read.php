@@ -1,5 +1,5 @@
 <?php
-	
+
 	function getAll($tbl) {
 		include('connect.php');
 		$queryAll = "SELECT * FROM {$tbl}";
@@ -7,7 +7,7 @@
 		if($runAll){
 			return $runAll;
 		}else{
-			$error = "There was a problem accessing this information.  Sorry about your luck ;)";
+			$error = "There was a problem accessing this information.";
 			return $error;
 		}
 		mysqli_close($link);
@@ -20,7 +20,7 @@
 		if($runSingle){
 			return $runSingle;
 		}else{
-			$error = "There was a problem accessing this information.  Sorry about your luck ;)";
+			$error = "There was a problem accessing this information.";
 			return $error;
 		}
 		mysqli_close($link);
@@ -35,7 +35,7 @@
 		if($runQuery){
 			return $runQuery;
 		}else{
-			$error = "There was a problem accessing this information.  Sorry about your luck ;)";
+			$error = "There was a problem accessing this information.";
 			return $error;
 		}
 		mysqli_close($link);

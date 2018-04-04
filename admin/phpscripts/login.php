@@ -3,17 +3,18 @@
     require_once('connect.php');
     $username = mysqli_real_escape_string($link, $username);
     $password = mysqli_real_escape_string($link, $password);
-    $loginstring = "SELECT * FROM tbl_user WHERE user_username= '{$username}' AND user_password='{$password}'";
-    $user_set = mysqli_query($link, $loginstring);
+    $loginstring = "SELECT * FROM tbl_users WHERE user_username= '{$username}' AND user_password='{$password}'";
+    // echo $loginstring;
+    $userSet = mysqli_query($link, $loginstring);
 
-    if(mysqli_num_rows($user_set)){
-      $founduser = mysqli_fetch_array($user_set, MYSQLI_ASSOC);
+    if(mysqli_num_rows($userSet)){
+      $founduser = mysqli_fetch_array($userSet, MYSQLI_ASSOC);
       $id = $founduser['user_id'];
       $_SESSION['user_id'] = $id;
-      $_SESSION['user_username'] = $founduser['user_firstname'];
+      $_SESSION['user_username'] = $founduser['user_name'];
 
       if(mysqli_query($link, $loginstring)){
-        $update ="UPDATE tbl_user SET user_ip='{$ip}' WHERE user_id={$id}";
+        $update ="UPDATE tbl_users SET user_ip='{$ip}' WHERE user_id={$id}";
         $updatequery = mysqli_query($link, $update);
       }
       //return $redirectLogin;

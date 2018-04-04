@@ -1,25 +1,25 @@
- <?php
+<?php
   // require_once('phpscripts/config.php');
   ini_set('display_errors',1);
   error_reporting(E_ALL);
 
-  function addMovie($cover, $title, $year, $run, $story, $trailer, $release, $genre){
+  function addMovie($thumbs, $title, $year, $description, $rating, $genre){
 
     include('connect.php');
 
-    if($cover['type'] == "image/jpg" || $cover['type'] == "image/jpeg"){
-    $targetpath = "../images/{$cover['name']}";
+    if($thumbs['type'] == "image/jpg" || $thumbs['type'] == "image/jpeg"){
+    $targetpath = "../images/{$thumbs['name']}";
 
-      if(move_uploaded_file($cover['tmp_name'], $targetpath)){
+      if(move_uploaded_file($thumbs['tmp_name'], $targetpath)){
         // echo "File transfer complete";
-        $th_copy = "../images/TH_{$cover['name']}";
+        $th_copy = "../images/TH_{$thumbs['name']}";
         if(!copy($targetpath, $th_copy)){
           $message = "Didn't work";
           return $message;
 
         }
         // add to database
-        $qstring = "INSERT INTO tbl_movies VALUES(NULL, '{$cover['name']}', '{$title}', '{$year}', '{$run}', '{$story}', '{$trailer}', '{$release}')";
+        $qstring = "INSERT INTO tbl_movies VALUES(NULL, '{$thumbs['name']}', '{$title}', '{$year}', '{$description}', '{$rating}')";
               // echo $qstring;
             $result = mysqli_query($link, $qstring);
               if($result){
