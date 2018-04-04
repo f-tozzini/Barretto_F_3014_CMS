@@ -1,12 +1,12 @@
 <?php
   require_once('phpscripts/config.php');
   $ip = $_SERVER['REMOTE_ADDR'];
-  // echo $ip;
+
   if(isset($_POST['submit'])){
-    // echo "works";
-    $username = trim($_POST['username']); //trim removes the white space when people try to copy and paste
+
+    $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-    if($username !== "" && $password !== ""){ //if it's identical
+    if($username !== "" && $password !== ""){
       $result = logIn($username, $password, $ip);
       $message = $result;
     }else{
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-  <!-- <img src="images/header.jpg" alt="header image" id="header-img"> -->
+  <img src="images/header.jpg" alt="header image" id="header-img">
   <div id="login-container">
   <h3>Login here for your</h3>
   <h2>Personalized Movie Selection</h2>

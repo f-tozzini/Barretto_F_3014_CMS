@@ -29,6 +29,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>The Movie APP</title>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="../css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -39,9 +40,31 @@
   <a href="admin_index.php">
     <i class="fa fa-home"></i>
   </a>
+
+  <a href="admin_addmovie.php">
+    <i class="ion-plus-round menu-icon"></i>
+  </a>
+  <a href="admin_editlist.php">
+    <i class="ion-edit menu-icon"></i>
+  </a>
+  <a href="admin_dashboard.php">
+    <i class="ion-android-favorite menu-icon"></i>
+  </a>
+
+  <a href="phpscripts/caller.php?caller_id=logout" class="sign-out">Sign Out</a>
+
   <div id="login-container">
-  <h3>Login here for your</h3>
-  <h2>Personalized Movie Selection</h2>
+
+    <i class="far fa-star"></i>
+  	<i class="far fa-star"></i>
+  	<i class="far fa-star"></i>
+  	<i class="far fa-star"></i>
+  	<i class="far fa-star"></i>
+  	<i class="far fa-star"></i>
+  	<i class="far fa-star"></i>
+
+  <h3>Add Here</h3>
+  <h2>Your New Movie</h2>
 
   <?php if (!empty($message)){ echo $message; }?>
   <form action ="admin_addmovie.php" method="post" enctype="multipart/form-data">
@@ -59,16 +82,17 @@
     <input type ="text" name="year" value="">
     <br><br>
 
-    <label>Movie Description</label>
-    <input type ="text" name="description" value="">
+    <label>Movie Desc</label>
+    <input type ="text" class="description-form" name="description" value="">
     <br><br>
 
     <label>Movie Rating</label>
     <input type ="text" name="rating" value="">
     <br><br>
 
-      <select name="genList">
-        <option value="">Please select a movie genre</option>
+        <label>Movie Genre</label>
+      <select name="genList" class="genList">
+        <option value="">Please Select a Genre</option>
 
         <?php
         while($row = mysqli_fetch_array($genQuery)){
@@ -77,9 +101,17 @@
         ?>
 
       </select>
-
+<br>
     <input type ="submit" name="submit" value="ADD MOVIE" class="button">
   </form>
+
+  <i class="far fa-star"></i>
+	<i class="far fa-star"></i>
+	<i class="far fa-star"></i>
+	<i class="far fa-star"></i>
+	<i class="far fa-star"></i>
+	<i class="far fa-star"></i>
+	<i class="far fa-star"></i>
 
 </div>
   <img src="images/footer.jpg" alt="footer image" id="footer-img">
