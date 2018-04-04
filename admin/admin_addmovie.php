@@ -11,7 +11,7 @@
     $year = ($_POST['year']);
     $description = ($_POST['description']);
     $rating = ($_POST['rating']);
-    $genre = ($_POST['genre']);
+    $genre = ($_POST['genList']);
     $result = addMovie($thumbs, $title, $year, $description, $rating, $genre);
     $message = $result;
       // echo $cover['type'];
@@ -35,7 +35,10 @@
 </head>
 <body>
 
-  <!-- <img src="images/header.jpg" alt="header image" id="header-img"> -->
+  <img src="images/header.jpg" alt="header image" id="header-img">
+  <a href="admin_index.php">
+    <i class="fa fa-home"></i>
+  </a>
   <div id="login-container">
   <h3>Login here for your</h3>
   <h2>Personalized Movie Selection</h2>

@@ -1,5 +1,7 @@
 //main
 
+$main: #1587AC;
+
 body
 {
   font-family: 'Roboto', sans-serif;
@@ -12,6 +14,12 @@ body
   padding: 20px 0 50px 0;
 }
 
+.container{
+  clear: both;
+  max-width: 1366px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
 h2 {
   font-size: 24px;
@@ -28,7 +36,7 @@ h3{
 #login-container
 {
   margin: 0 auto;
-  border: 3px solid #1587AC;
+  border: 3px solid $main;
   border-radius: 6px;
   width: 50%;
   height: 70%;
@@ -153,7 +161,7 @@ form{
   padding: 10px;
   font-size: 1.2em;
   margin: 0 auto;
-  color: #1587AC;
+  color: $main;
 
 }
 .admin-button
@@ -226,8 +234,99 @@ label, input
   margin-bottom: 70px;
   margin: 0 auto;
   a {
-    color: #1587AC;
+    color: $main;
     text-transform: uppercase;
     margin-left: 50px;
+  }
+}
+
+.movie-box
+{
+  float: left;
+  margin-left: 35px;
+  width: 200px;
+  // height: 500px;
+  margin-top: 25px;
+  border-bottom: 1px dotted $main;
+  img{
+    height: 270px;
+    width: 190px;
+    &:hover{
+      opacity: 0.85;
+    }
+  }
+  h4{
+    color: $main;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+  h5{
+    color: $main;
+    padding: 5px;
+    margin: 0;
+    font-size: 13px;
+    text-align: left;
+  }
+  // h6{
+  //   padding: 5px;
+  //   margin: 0;
+  //   font-size: 13px;
+  //   text-align: left;
+  // }
+  p{
+    font-family: 'Quicksand';
+    font-size: 10px;
+    padding: 5px;
+    height: 80px;
+    text-align: left;
+  }
+  .fa-star{
+    font-size: 0.8em;
+    margin-right: 5px;
+    padding: 0;
+  }
+  .year
+  {
+    color: white;
+    font-size: 11px;
+    // margin-left: 20px;
+    float: right;
+    padding-right: 10px;
+  }
+}
+
+.mainNav {
+  ul li{
+    display: inline;
+    text-decoration: none;
+    margin: 15px;
+    text-transform: uppercase;
+    color: $main;
+    &:hover{
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  a{
+  text-decoration: none;
+  }
+  .button {
+    color: white;
+    padding: 10px 15px;
+  }
+}
+
+.fa-home
+{
+  font-size: 2em;
+  padding-left: 25px;
+  padding-top: 10px;
+  margin-bottom: -80px;
+  color: white;
+  &:hover{
+    color: $main;
   }
 }

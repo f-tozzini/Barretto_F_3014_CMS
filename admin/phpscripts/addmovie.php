@@ -19,7 +19,7 @@
 
         }
         // add to database
-        $qstring = "INSERT INTO tbl_movies VALUES(NULL, '{$thumbs['name']}', '{$title}', '{$year}', '{$description}', '{$rating}')";
+        $qstring = "INSERT INTO tbl_movies VALUES(NULL, '{$title}', '{$thumbs['name']}', '{$description}', '{$year}',  '{$rating}')";
               // echo $qstring;
             $result = mysqli_query($link, $qstring);
               if($result){
@@ -33,7 +33,7 @@
                 $qstring3 = "INSERT INTO tbl_mov_genre VALUES(NULL, {$lastID}, {$genre})";
                 $result3 = mysqli_query($link, $qstring3);
               }
-              // redirect_to("admin_index.php");
+              redirect_to("admin_index.php");
       }
       // $size = getimagesize($targetpath);
       // echo $size[3];
