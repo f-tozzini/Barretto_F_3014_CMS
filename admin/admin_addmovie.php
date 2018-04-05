@@ -14,10 +14,7 @@
     $genre = ($_POST['genList']);
     $result = addMovie($thumbs, $title, $year, $description, $rating, $genre);
     $message = $result;
-      // echo $cover['type'];
-      // echo $cover['name'];
-      // echo $cover['size'];
-      // echo $cover['tmp_name'];
+  
     }
 ?>
 
