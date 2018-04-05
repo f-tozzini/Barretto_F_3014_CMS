@@ -11,7 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/main.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <title>Admin Page</title>
+  <title>The Movie APP</title>
 </head>
 <body>
   <img src="images/header.jpg" alt="header image" id="header-img">

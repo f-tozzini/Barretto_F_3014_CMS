@@ -13,7 +13,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/main.css">
 <title>The Movie APP</title>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="../css/main.css">

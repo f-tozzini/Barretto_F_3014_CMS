@@ -8,11 +8,11 @@
     include('connect.php');
 
     if($thumbs['type'] == "image/jpg" || $thumbs['type'] == "image/jpeg"){
-    $targetpath = "../images/{$thumbs['name']}";
+    $targetpath = "images/{$thumbs['name']}";
 
       if(move_uploaded_file($thumbs['tmp_name'], $targetpath)){
         // echo "File transfer complete";
-        $th_copy = "../images/TH_{$thumbs['name']}";
+        $th_copy = "images/TH_{$thumbs['name']}";
         if(!copy($targetpath, $th_copy)){
           $message = "Didn't work";
           return $message;
