@@ -3,9 +3,9 @@
 
 This is a movie app created for the Multimedia class - Fanshawe college.
 
-##Getting started:
+## Getting started:
 
-###clone the repo with: https://github.com/f-tozzini/Barretto_F_3014_CMS.git
+### clone the repo with: https://github.com/f-tozzini/Barretto_F_3014_CMS.git
 
 ### Run MAMP/WAMP
 
