@@ -11,5 +11,5 @@ This is a movie app created for the Multimedia class - Fanshawe college.
 
 ### Install the database on phpMyadmin
 
-##Author
-###Flavia Tozzini Barretto
+## Author
+### Flavia Tozzini Barretto
