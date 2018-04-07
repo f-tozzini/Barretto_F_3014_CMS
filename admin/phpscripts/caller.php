@@ -8,13 +8,14 @@
     if($dir == "logout"){
           // echo "Hello2";
       logged_out();
-    } else if ($dir == "delete") {
-      $id = $_GET['id'];
-      deleteUser($id);
+    }else if($dir == "deleteMovie"){
+    $id = $_GET['id'];
+    deleteMovies($id);
     } else {
       echo "Caller id was passed incorrectly";
     }
   }
+
 
 
 

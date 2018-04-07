@@ -37,7 +37,19 @@
 
   mysqli_close($link);
 
+  function deleteMovies($id) {
+    include('connect.php');
+    $delstring = "DELETE FROM tbl_movies WHERE movies_id = {$id}";
+    $delquery = mysqli_query($link, $delstring);
+    if($delquery) {
+      redirect_to("../admin_dashboard.php");
+    }else{
+      $message ="Sad";
+      return $message;
+    }
 
+  mysqli_close($link);
+  }
 
 
 ?>
