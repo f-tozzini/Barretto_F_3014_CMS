@@ -57,7 +57,9 @@ while($row = mysqli_fetch_array($moviesEdit)){
   echo "
       <div class=\"edit-box\">
       <h4>{$row['movies_title']}</h4>
-      <a class=\"admin-button\" href=\"admin_editall.php?id={$row['movies_id']}\">Edit Movie</a>
+      <a class=\"admin-button edit\" href=\"admin_editall.php?id={$row['movies_id']}\">Edit Movie</a>
+
+			<a class=\"admin-button delete\" href=\"phpscripts/caller.php?caller_id=deleteMovie&id={$row['movies_id']}\">Delete Movie</a>
       </div>
   ";
 }

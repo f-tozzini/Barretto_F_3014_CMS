@@ -290,6 +290,12 @@ label, input {
     width: 70%;
     height: 50px;
     margin: 0 auto; }
+    .edit-container .edit-box .edit {
+      margin-left: 580px;
+      width: 90px; }
+    .edit-container .edit-box .delete {
+      margin-left: 15px;
+      width: 90px; }
   .edit-container h4 {
     margin-left: 40px;
     font-size: 18px;

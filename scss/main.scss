@@ -342,8 +342,16 @@ label, input
     border-bottom: 1px dotted $main;
     width: 70%;
     height:50px;
-
     margin: 0 auto;
+    .edit{
+      margin-left: 580px;
+      width: 90px;
+    }
+    .delete{
+      // margin-top: -10px;
+          margin-left: 15px;
+      width: 90px;
+    }
   }
   h4{
   margin-left: 40px;
